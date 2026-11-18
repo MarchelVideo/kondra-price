@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Ціни на процедури Kondra Clinic">
+<meta name="theme-color" content="#0F0D0B">
+<title>Kondra Clinic — ціни</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap">
+<style>
+/* Layout: one page, the approved price sheets stacked as frosted-glass panes over large soft spheres in espresso and taupe. */
+:root{--night:#0F0D0B;--espresso:#1E1915;--mocha:#4B3D32;--taupe:#9A8470;--sand:#D8C8B4;--text:#F6F1EA;color-scheme:dark}
+*{box-sizing:border-box}
+html{background:var(--night)}
+body{background:var(--night);color:var(--text);font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;min-height:100%}
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(circle 62vmax at 50% 112%, rgba(216,200,180,.55) 0%, rgba(154,132,112,.75) 30%, var(--mocha) 62%, rgba(75,61,50,.0) 62.4%),
+    radial-gradient(circle 58vmax at 50% -14%, #2B241F 0%, #120F0D 58%, rgba(18,15,13,0) 58.4%),
+    radial-gradient(circle 40vmax at 108% 46%, rgba(154,132,112,.35) 0%, rgba(75,61,50,.25) 55%, rgba(75,61,50,0) 56%),
+    radial-gradient(circle 34vmax at -10% 40%, rgba(216,200,180,.16) 0%, rgba(75,61,50,.12) 60%, rgba(75,61,50,0) 61%),
+    linear-gradient(170deg, var(--espresso), var(--night) 55%, #2A221C)}
+.gut{position:relative;z-index:1;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{padding-block:clamp(40px,7vw,72px) clamp(24px,4vw,40px);display:flex;justify-content:center}
+.mk{display:inline-flex;flex-direction:column;align-items:center;gap:4px;color:var(--text)}
+.mk b{font-weight:500;font-size:clamp(22px,3.4vw,30px);letter-spacing:.42em;margin-right:-.42em}
+.mk span{font-size:clamp(13px,1.6vw,15px);letter-spacing:.24em}
+main{display:grid;gap:clamp(28px,5vw,56px);padding-bottom:clamp(48px,8vw,96px)}
+.sheet{width:100%;max-width:820px;margin:0 auto}
+.frame{position:relative;width:100%;aspect-ratio:1024/1536;max-width:100%;overflow:hidden;border-radius:clamp(18px,3.4vw,34px);
+  background:linear-gradient(165deg,rgba(255,255,255,.16),rgba(255,255,255,.05) 55%,rgba(255,255,255,.09)),rgba(20,16,13,.18);
+  -webkit-backdrop-filter:blur(30px) saturate(125%);backdrop-filter:blur(30px) saturate(125%)}
+.frame>.pg{position:absolute;top:0;left:0;transform-origin:0 0}
+#s-estetyst{width:1024px;height:1536px;box-sizing:border-box;padding:64px 100px 56px;background:#F3F0EA;color:#141414;font-family:'Montserrat',sans-serif;display:flex;flex-direction:column}
+#s-estetyst .logo{display:inline-flex;flex-direction:column;align-items:center;align-self:flex-start;gap:2px}
+#s-estetyst .logo b{font-weight:500;font-size:18px;letter-spacing:.38em;margin-right:-.38em}
+#s-estetyst .logo span{font-size:13px;letter-spacing:.2em}
+#s-estetyst .t{margin:26px 0 0;font-weight:900;line-height:.92}
+#s-estetyst .sub{font-size:20px;letter-spacing:.12em;line-height:1.5;margin-top:14px;text-transform:uppercase}
+#s-estetyst .sh{display:flex;align-items:center;gap:24px;margin:28px 0 4px}
+#s-estetyst .sh h2{margin:0;font-weight:900;font-size:38px;line-height:1;text-transform:uppercase}
+#s-estetyst .sh i{flex:1;height:1.5px;background:#141414}
+#s-estetyst .lb{font-weight:700;font-size:15px;letter-spacing:.24em;color:#6E6354;margin:12px 0 0;text-transform:uppercase}
+#s-estetyst .r{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:4px 0}
+#s-estetyst .r span{font-weight:600;font-size:20px;letter-spacing:.04em;text-transform:uppercase}
+#s-estetyst .r b{font-weight:700;font-size:20px;white-space:nowrap}
+#s-estetyst small{display:block;font-weight:500;font-size:14px;letter-spacing:.02em;text-transform:none;color:#5E574E;margin-top:2px}
+#s-estetyst .r{display:grid;grid-template-columns:minmax(0,1fr) auto}
+#s-estetyst .r span,#s-estetyst .r2 span,#s-estetyst .r b,#s-estetyst .r2 b{white-space:nowrap}
+#s-contour{width:1024px;height:1536px;box-sizing:border-box;padding:64px 100px 56px;background:#F3F0EA;color:#141414;font-family:'Montserrat',sans-serif;display:flex;flex-direction:column}
+#s-contour .logo{display:inline-flex;flex-direction:column;align-items:center;align-self:flex-start;gap:2px}
+#s-contour .logo b{font-weight:500;font-size:18px;letter-spacing:.38em;margin-right:-.38em}
+#s-contour .logo span{font-size:13px;letter-spacing:.2em}
+#s-contour .t{margin:26px 0 0;font-weight:900;line-height:.92}
+#s-contour .sh{display:flex;align-items:center;gap:24px;margin:30px 0 6px}
+#s-contour .sh h2{margin:0;font-weight:900;font-size:40px;line-height:1;text-transform:uppercase}
+#s-contour .sh i{flex:1;height:1.5px;background:#141414}
+#s-contour .ch{display:grid;grid-template-columns:1fr 160px 160px;font-weight:700;font-size:13px;letter-spacing:.16em;color:#6E6354;text-align:right}
+#s-contour .r2{display:grid;grid-template-columns:1fr 160px 160px;align-items:baseline;padding:4px 0}
+#s-contour .r2 span{font-weight:600;font-size:20px;letter-spacing:.04em;text-transform:uppercase}
+#s-contour .r2 b{font-weight:700;font-size:20px;white-space:nowrap;text-align:right}
+#s-contour small{display:block;font-weight:500;font-size:14px;letter-spacing:.02em;text-transform:none;color:#5E574E;margin-top:2px}
+#s-contour .r{display:grid;grid-template-columns:minmax(0,1fr) auto}
+#s-contour .r span,#s-contour .r2 span,#s-contour .r b,#s-contour .r2 b{white-space:nowrap}
+#s-botox{width:1024px;height:1536px;box-sizing:border-box;padding:64px 100px 56px;background:#F3F0EA;color:#141414;font-family:'Montserrat',sans-serif;display:flex;flex-direction:column}
+#s-botox .logo{display:inline-flex;flex-direction:column;align-items:center;align-self:flex-start;gap:2px}
+#s-botox .logo b{font-weight:500;font-size:18px;letter-spacing:.38em;margin-right:-.38em}
+#s-botox .logo span{font-size:13px;letter-spacing:.2em}
+#s-botox .t{margin:26px 0 0;font-weight:900;line-height:.92}
+#s-botox .brand{font-weight:600;font-size:34px;letter-spacing:.32em;margin-top:6px}
+#s-botox .sub{font-size:20px;letter-spacing:.12em;line-height:1.5;margin-top:16px;text-transform:uppercase}
+#s-botox .sh{display:flex;align-items:center;gap:24px;margin:52px 0 12px}
+#s-botox .sh h2{margin:0;font-weight:900;font-size:44px;line-height:1;text-transform:uppercase}
+#s-botox .sh i{flex:1;height:1.5px;background:#141414}
+#s-botox .r{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:8px 0}
+#s-botox .r span{font-weight:600;font-size:24px;letter-spacing:.04em;text-transform:uppercase}
+#s-botox .r b{font-weight:700;font-size:24px;white-space:nowrap}
+#s-botox small{display:block;font-weight:500;font-size:16px;letter-spacing:.02em;text-transform:none;color:#5E574E;margin-top:3px}
+#s-botox .r{display:grid;grid-template-columns:minmax(0,1fr) auto}
+#s-botox .r span,#s-botox .r2 span,#s-botox .r b,#s-botox .r2 b{white-space:nowrap}
+#s-lumecca{width:1024px;height:1536px;box-sizing:border-box;padding:64px 100px 56px;background:#F3F0EA;color:#141414;font-family:'Montserrat',sans-serif;display:flex;flex-direction:column}
+#s-lumecca .logo{display:inline-flex;flex-direction:column;align-items:center;align-self:flex-start;gap:2px}
+#s-lumecca .logo b{font-weight:500;font-size:18px;letter-spacing:.38em;margin-right:-.38em}
+#s-lumecca .logo span{font-size:13px;letter-spacing:.2em}
+#s-lumecca .t{margin:26px 0 0;font-weight:900;line-height:.92}
+#s-lumecca .brand{font-weight:600;font-size:34px;letter-spacing:.32em;margin-top:6px}
+#s-lumecca .sub{font-size:20px;letter-spacing:.12em;line-height:1.5;margin-top:14px;text-transform:uppercase}
+#s-lumecca .bl{margin:24px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+#s-lumecca .bl li{font-weight:700;font-size:20px;letter-spacing:.05em;text-transform:uppercase;display:flex;gap:16px}
+#s-lumecca .bl li:before{content:"•"}
+#s-lumecca .sh{display:flex;align-items:center;gap:24px;margin:40px 0 8px}
+#s-lumecca .sh h2{margin:0;font-weight:900;font-size:44px;line-height:1;text-transform:uppercase}
+#s-lumecca .sh i{flex:1;height:1.5px;background:#141414}
+#s-lumecca .r{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:5px 0}
+#s-lumecca .r span{font-weight:600;font-size:22px;letter-spacing:.04em;text-transform:uppercase}
+#s-lumecca .r b{font-weight:700;font-size:22px;white-space:nowrap}
+#s-lumecca .r{display:grid;grid-template-columns:minmax(0,1fr) auto}
+#s-lumecca .r span,#s-lumecca .r2 span,#s-lumecca .r b,#s-lumecca .r2 b{white-space:nowrap}
+#s-morpheus8{width:1024px;height:1536px;box-sizing:border-box;padding:60px 100px 48px;background:#F3F0EA;color:#141414;font-family:'Montserrat',sans-serif;display:flex;flex-direction:column}
+#s-morpheus8 .logo{display:inline-flex;flex-direction:column;align-items:center;align-self:flex-start;gap:2px}
+#s-morpheus8 .logo b{font-weight:500;font-size:18px;letter-spacing:.38em;margin-right:-.38em}
+#s-morpheus8 .logo span{font-size:13px;letter-spacing:.2em}
+#s-morpheus8 .t{margin:22px 0 0;font-weight:900;line-height:.92}
+#s-morpheus8 .brand{font-weight:600;font-size:32px;letter-spacing:.32em;margin-top:6px}
+#s-morpheus8 .sub{font-size:19px;letter-spacing:.12em;line-height:1.5;margin-top:12px;text-transform:uppercase}
+#s-morpheus8 .bl{margin:20px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px}
+#s-morpheus8 .bl li{font-weight:700;font-size:18px;letter-spacing:.05em;text-transform:uppercase;display:flex;gap:16px}
+#s-morpheus8 .bl li:before{content:"•"}
+#s-morpheus8 .sh{display:flex;align-items:center;gap:24px;margin:28px 0 6px}
+#s-morpheus8 .sh h2{margin:0;font-weight:900;font-size:40px;line-height:1;text-transform:uppercase}
+#s-morpheus8 .sh i{flex:1;height:1.5px;background:#141414}
+#s-morpheus8 .r{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:3px 0}
+#s-morpheus8 .r span{font-weight:600;font-size:19px;letter-spacing:.04em;text-transform:uppercase}
+#s-morpheus8 .r b{font-weight:700;font-size:19px;white-space:nowrap}
+#s-morpheus8 .r{display:grid;grid-template-columns:minmax(0,1fr) auto}
+#s-morpheus8 .r span,#s-morpheus8 .r2 span,#s-morpheus8 .r b,#s-morpheus8 .r2 b{white-space:nowrap}
+#s-injections{width:1024px;height:1536px;box-sizing:border-box;padding:64px 100px 56px;background:#F3F0EA;color:#141414;font-family:'Montserrat',sans-serif;display:flex;flex-direction:column}
+#s-injections .logo{display:inline-flex;flex-direction:column;align-items:center;align-self:flex-start;gap:2px}
+#s-injections .logo b{font-weight:500;font-size:18px;letter-spacing:.38em;margin-right:-.38em}
+#s-injections .logo span{font-size:13px;letter-spacing:.2em}
+#s-injections .t{margin:26px 0 0;font-weight:900;line-height:.92}
+#s-injections .sub{font-size:20px;letter-spacing:.12em;line-height:1.5;margin-top:16px;text-transform:uppercase}
+#s-injections .sh{display:flex;align-items:center;gap:24px;margin:40px 0 8px}
+#s-injections .sh h2{margin:0;font-weight:900;font-size:42px;line-height:1;text-transform:uppercase}
+#s-injections .sh i{flex:1;height:1.5px;background:#141414}
+#s-injections .ch{display:grid;grid-template-columns:1fr 160px 160px;font-weight:700;font-size:13px;letter-spacing:.16em;color:#6E6354;text-align:right}
+#s-injections .r2{display:grid;grid-template-columns:1fr 160px 160px;align-items:baseline;padding:6px 0}
+#s-injections .r2 span{font-weight:600;font-size:22px;letter-spacing:.04em;text-transform:uppercase}
+#s-injections .r2 b{font-weight:700;font-size:22px;white-space:nowrap;text-align:right}
+#s-injections small{display:block;font-weight:500;font-size:15px;letter-spacing:.02em;text-transform:none;color:#5E574E;margin-top:3px}
+#s-injections .nt{border:1.5px solid #141414;padding:24px 28px;font-weight:500;font-size:18px;line-height:1.55;margin-top:auto;text-align:center}
+#s-injections .r{display:grid;grid-template-columns:minmax(0,1fr) auto}
+#s-injections .r span,#s-injections .r2 span,#s-injections .r b,#s-injections .r2 b{white-space:nowrap}
+#s-lifting{width:1024px;height:1536px;box-sizing:border-box;padding:64px 100px 56px;background:#F3F0EA;color:#141414;font-family:'Montserrat',sans-serif;display:flex;flex-direction:column}
+#s-lifting .logo{display:inline-flex;flex-direction:column;align-items:center;align-self:flex-start;gap:2px}
+#s-lifting .logo b{font-weight:500;font-size:18px;letter-spacing:.38em;margin-right:-.38em}
+#s-lifting .logo span{font-size:13px;letter-spacing:.2em}
+#s-lifting .t{margin:26px 0 0;font-weight:900;line-height:.92}
+#s-lifting .sub{font-size:20px;letter-spacing:.12em;line-height:1.5;margin-top:16px;text-transform:uppercase}
+#s-lifting .sh{display:flex;align-items:center;gap:24px;margin:34px 0 8px}
+#s-lifting .sh h2{margin:0;font-weight:900;font-size:42px;line-height:1;text-transform:uppercase}
+#s-lifting .sh i{flex:1;height:1.5px;background:#141414}
+#s-lifting .lb{font-weight:700;font-size:16px;letter-spacing:.24em;color:#6E6354;margin:14px 0 2px;text-transform:uppercase}
+#s-lifting .ch{display:grid;grid-template-columns:1fr 160px 160px;font-weight:700;font-size:13px;letter-spacing:.16em;color:#6E6354;text-align:right}
+#s-lifting .r{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:5px 0}
+#s-lifting .r2{display:grid;grid-template-columns:1fr 160px 160px;align-items:baseline;padding:5px 0}
+#s-lifting .r span,#s-lifting .r2 span{font-weight:600;font-size:21px;letter-spacing:.04em;text-transform:uppercase}
+#s-lifting .r b,#s-lifting .r2 b{font-weight:700;font-size:21px;white-space:nowrap;text-align:right}
+#s-lifting small{display:block;font-weight:500;font-size:15px;letter-spacing:.02em;text-transform:none;color:#5E574E;margin-top:3px}
+#s-lifting .nt{border:1.5px solid #141414;padding:22px 28px;font-weight:500;font-size:17px;line-height:1.55;margin:10px 0}
+#s-lifting .nt ul{margin:8px 0;padding-left:22px}
+#s-lifting .r{display:grid;grid-template-columns:minmax(0,1fr) auto}
+#s-lifting .r span,#s-lifting .r2 span,#s-lifting .r b,#s-lifting .r2 b{white-space:nowrap}
+/* glass recolor: same fonts and layout as the print sheets, light text on glass */
+.frame .pg{background:transparent!important;color:var(--text)!important}
+.frame .sh i{background:rgba(246,241,234,.7)!important}
+.frame .ch,.frame .lb{color:rgba(246,241,234,.72)!important}
+.frame small{color:rgba(246,241,234,.72)!important}
+.frame .nt{border-color:rgba(246,241,234,.55)!important}
+</style>
+<style>body{margin:0}</style>
+</head>
+<body>
+
+
+<div class="bg" aria-hidden="true"></div>
+
+<header class="gut">
+  <div class="mk" aria-label="Kondra clinic"><b>KONDRA</b><span>clinic</span></div>
+</header>
+
+<main class="gut">
+<article class="sheet" id="estetyst" aria-label="Естетист"><div class="frame"><div class="pg" id="s-estetyst">
+<div class="logo"><b>KONDRA</b><span>clinic</span></div>
+<h1 class="t" style="font-size:120px">ЕСТЕТИСТ</h1>
+<div class="sub">Олена</div>
+
+<div class="sh"><h2>Чистки</h2><i></i></div>
+<div class="r"><span>Чистка</span><b>65 $</b></div>
+<div class="r"><span>Киснева чистка</span><b>60 $</b></div>
+
+<div class="sh"><h2>Пілінги</h2><i></i></div>
+<div class="r"><span>Поверхневі<small>мигдальний, азелаїновий, феруловий</small></span><b>30 $</b></div>
+<div class="r"><span>BioRePeel</span><b>60 $</b></div>
+
+<div class="sh"><h2>Доглядові процедури</h2><i></i></div>
+<div class="lb">iS Clinical</div>
+<div class="r"><span>Вогонь і лід</span><b>60 $</b></div>
+<div class="r"><span>Ферментотерапія</span><b>80 $</b></div>
+<div class="r"><span>Шовковий SPA-догляд</span><b>60 $</b></div>
+<div class="lb">Revivre</div>
+<div class="r"><span>Silver</span><b>70 $</b></div>
+<div class="r"><span>Gold</span><b>80 $</b></div>
+<div class="lb">KLAPP</div>
+<div class="r"><span>Immun Hydra Collagen</span><b>80 $</b></div>
+<div class="r"><span>Aloe</span><b>70 $</b></div>
+<div class="r"><span>Hyaluronic Multi Performance</span><b>75 $</b></div>
+<div class="r"><span>Hyaluron Infusion</span><b>90 $</b></div>
+<div class="r"><span>C-Pure Face Infusion</span><b>85 $</b></div>
+<div class="r"><span>A-Classic</span><b>95 $</b></div>
+<div class="r"><span>Exogen Triple</span><b>100 $</b></div>
+<div class="r"><span>Diamond</span><b>110 $</b></div>
+<div class="r"><span>Cell Pro Lifting</span><b>90 $</b></div>
+
+<div class="sh"><h2>Тіло</h2><i></i></div>
+<div class="r"><span>Антицелюлітний догляд</span><b>80 $</b></div>
+<div class="r"><span>Ліфтинг-догляд</span><b>80 $</b></div>
+</div></div></article>
+<article class="sheet" id="contour" aria-label="Контурна пластика"><div class="frame"><div class="pg" id="s-contour">
+<div class="logo"><b>KONDRA</b><span>clinic</span></div>
+<h1 class="t" style="font-size:92px">КОНТУРНА<br>ПЛАСТИКА</h1>
+
+<div class="sh"><h2>Губи</h2><i></i></div>
+<div class="ch"><span></span><span>DR. KONDRA</span><span>DR. VALERIIA</span></div>
+<div class="r2"><span>Південна Корея</span><b>200 $</b><b>150 $</b></div>
+<div class="r2"><span>Stylage 1 ml</span><b>220 $</b><b>200 $</b></div>
+<div class="r2"><span>Teosyal RHA 3 1 ml</span><b>280 $</b><b>250 $</b></div>
+<div class="r2"><span>Juvederm 1 ml</span><b>300 $</b><b>250 $</b></div>
+<div class="r2"><span>Restylane 1 ml</span><b>300 $</b><b>280 $</b></div>
+<div class="r2"><span>Juvederm 0.55 ml</span><b>150 $</b><b>130 $</b></div>
+<div class="r2"><span>Розчинення губ</span><b>120 $</b><b>100 $</b></div>
+
+<div class="sh"><h2>Обличчя</h2><i></i></div>
+<div class="ch"><span></span><span>DR. KONDRA</span><span>DR. VALERIIA</span></div>
+<div class="r2"><span>Stylage XL</span><b>250 $</b><b>220 $</b></div>
+<div class="r2"><span>Juvederm</span><b>300 $</b><b>250 $</b></div>
+<div class="r2"><span>Restylane</span><b>300 $</b><b>280 $</b></div>
+
+<div class="sh"><h2>Ботулінотерапія</h2><i></i></div><div class="ch"><span></span><span>DR. KONDRA</span><span>DR. VALERIIA</span></div>
+<div class="r2"><span>Full face</span><b>400 $</b><b>350 $</b></div>
+<div class="r2"><span>Full face + шия</span><b>500 $</b><b>450 $</b></div>
+<div class="r2"><span>5 в 1<small>лоб, міжбрів’я, очі, ніс, кролячі зморшки</small></span><b>200 $</b><b>180 $</b></div>
+<div class="r2"><span>Лоб + міжбрів’я</span><b>100 $</b><b>80 $</b></div>
+<div class="r2"><span>1 зона<small>міжбрів’я / очі / ніс</small></span><b>60 $</b><b>50 $</b></div>
+<div class="r2"><span>Жувальні м’язи</span><b>70 $</b><b>70 $</b></div>
+<div class="r2"><span>Traptox</span><b>—</b><b>250 $</b></div>
+<div class="r2"><span>Гіпергідроз<small>пахви / руки / стопи</small></span><b>—</b><b>280 $</b></div>
+</div></div></article>
+<article class="sheet" id="botox" aria-label="Botox"><div class="frame"><div class="pg" id="s-botox">
+<div class="logo"><b>KONDRA</b><span>clinic</span></div>
+<h1 class="t" style="font-size:150px">BOTOX</h1>
+<div class="brand">ALLERGAN</div>
+<div class="sub">Ботулінотерапія</div>
+
+<div class="sh"><h2>Зони</h2><i></i></div>
+<div class="r"><span>Міжбрів’я</span><b>80 $</b></div>
+<div class="r"><span>Лоб + міжбрів’я</span><b>160 $</b></div>
+<div class="r"><span>Очі</span><b>80 $</b></div>
+<div class="r"><span>Лоб + міжбрів’я + очі</span><b>240 $</b></div>
+<div class="r"><span>Верхня третина<small>5 в 1: лоб + міжбрів’я + очі + ніс + fox eyes</small></span><b>300 $</b></div>
+<div class="r"><span>Моделювання носу<small>Звуження + підняття</small></span><b>70 $</b></div>
+<div class="r"><span>Жувальні м’язи<small>Бруксизм</small></span><b>100 $</b></div>
+<div class="r"><span>Яснева посмішка</span><b>40 $</b></div>
+<div class="r"><span>Підборіддя</span><b>40 $</b></div>
+<div class="r"><span>Full face</span><b>500 $</b></div>
+<div class="r"><span>Шия<small>Усунення тяжів</small></span><b>180 $</b></div>
+<div class="r"><span>Full face + платизма (шия)</span><b>600 $</b></div>
+<div class="r"><span>Traptox</span><b>250 $</b></div>
+</div></div></article>
+<article class="sheet" id="lumecca" aria-label="Lumecca"><div class="frame"><div class="pg" id="s-lumecca">
+<div class="logo"><b>KONDRA</b><span>clinic</span></div>
+<h1 class="t" style="font-size:132px">LUMECCA</h1>
+<div class="brand">INMODE</div>
+<div class="sub">Фотоомолодження нового покоління</div>
+<ul class="bl">
+<li>Пігментація різного ступеня</li>
+<li>Телеангіоектазії</li>
+<li>Вікові зміни тонусу шкіри</li>
+<li>Розацеа і купероз</li>
+<li>Тьмяний колір шкіри</li>
+<li>Нерівна поверхня шкіри</li>
+<li>Акне і постакне</li>
+</ul>
+
+<div class="sh"><h2>Обличчя</h2><i></i></div>
+<div class="r"><span>Обличчя</span><b>100 €</b></div>
+<div class="r"><span>Шия</span><b>100 €</b></div>
+<div class="r"><span>Декольте</span><b>150 €</b></div>
+<div class="r"><span>Обличчя + шия</span><b>180 €</b></div>
+<div class="r"><span>Обличчя + шия + декольте</span><b>300 €</b></div>
+<div class="r"><span>Купероз щік</span><b>60 €</b></div>
+<div class="r"><span>Одинична судина</span><b>15 €</b></div>
+<div class="r"><span>Крила носа</span><b>25 €</b></div>
+<div class="r"><span>Підборіддя</span><b>40 €</b></div>
+<div class="r"><span>Ніс</span><b>50 €</b></div>
+
+<div class="sh"><h2>Тіло</h2><i></i></div>
+<div class="r"><span>Передпліччя</span><b>100 €</b></div>
+<div class="r"><span>Руки до ліктя</span><b>100 €</b></div>
+<div class="r"><span>Руки повністю</span><b>200 €</b></div>
+<div class="r"><span>Кисті рук</span><b>50 €</b></div>
+<div class="r"><span>Спина</span><b>150 €</b></div>
+</div></div></article>
+<article class="sheet" id="morpheus8" aria-label="Morpheus8"><div class="frame"><div class="pg" id="s-morpheus8">
+<div class="logo"><b>KONDRA</b><span>clinic</span></div>
+<h1 class="t" style="font-size:112px">MORPHEUS8</h1>
+<div class="brand">INMODE</div>
+<div class="sub">Мікроголковий RF-ліфтинг нового покоління</div>
+<ul class="bl">
+<li>Ліфтинг та ремоделювання</li>
+<li>Стимуляція колагену</li>
+<li>Покращення текстури шкіри</li>
+<li>Зменшення пор</li>
+<li>Корекція рубців та постакне</li>
+<li>Підвищення щільності та пружності шкіри</li>
+</ul>
+
+<div class="sh"><h2>Обличчя</h2><i></i></div>
+<div class="r"><span>Обличчя</span><b>270 €</b></div>
+<div class="r"><span>Шия</span><b>200 €</b></div>
+<div class="r"><span>Декольте</span><b>250 €</b></div>
+<div class="r"><span>Обличчя + шия</span><b>370 €</b></div>
+<div class="r"><span>Обличчя + шия + декольте</span><b>430 €</b></div>
+<div class="r"><span>Навколоорбітальна зона</span><b>190 €</b></div>
+<div class="r"><span>Шия + друге підборіддя</span><b>200 €</b></div>
+<div class="r"><span>Підборіддя</span><b>150 €</b></div>
+
+<div class="sh"><h2>Тіло</h2><i></i></div>
+<div class="r"><span>Руки</span><b>290 €</b></div>
+<div class="r"><span>Кисті рук</span><b>190 €</b></div>
+<div class="r"><span>Внутрішня поверхня рук</span><b>330 €</b></div>
+<div class="r"><span>Живіт (зона три долоні)</span><b>330 €</b></div>
+<div class="r"><span>Спина (передлопаткова зона)</span><b>330 €</b></div>
+<div class="r"><span>Спина (ділянка 15×15)</span><b>330 €</b></div>
+<div class="r"><span>Сідниці</span><b>360 €</b></div>
+<div class="r"><span>Передня частина стегна</span><b>330 €</b></div>
+<div class="r"><span>Задня частина стегна</span><b>330 €</b></div>
+<div class="r"><span>Стегна</span><b>330 €</b></div>
+<div class="r"><span>Коліна</span><b>290 €</b></div>
+<div class="r"><span>Гомілки</span><b>330 €</b></div>
+<div class="r"><span>Лікті</span><b>270 €</b></div>
+<div class="r"><span>Бока</span><b>290 €</b></div>
+<div class="r"><span>Поперек</span><b>320 €</b></div>
+<div class="r"><span>Галіфе</span><b>230 €</b></div>
+<div class="r"><span>Підсіднична складка (Banana roll)</span><b>190 €</b></div>
+<div class="r"><span>Пахви</span><b>140 €</b></div>
+</div></div></article>
+<article class="sheet" id="injections" aria-label="Ін’єкційна косметологія"><div class="frame"><div class="pg" id="s-injections">
+<div class="logo"><b>KONDRA</b><span>clinic</span></div>
+<h1 class="t" style="font-size:84px">ІН’ЄКЦІЙНА<br>КОСМЕТОЛОГІЯ</h1>
+
+<div class="sh"><h2>Ліполітики</h2><i></i></div>
+<div class="ch"><span></span><span>DR. KONDRA</span><span>DR. VALERIIA</span></div>
+<div class="r2"><span>1 зона<small>носогубний жировий пакет / брилі / щоки / підборіддя</small></span><b>120 $</b><b>100 $</b></div>
+
+<div class="sh"><h2>Біоревіталізація</h2><i></i></div>
+<div class="ch"><span></span><span>DR. KONDRA</span><span>DR. VALERIIA</span></div>
+<div class="r2"><span>Karisma</span><b>300 $</b><b>250 $</b></div>
+<div class="r2"><span>Glow Skin</span><b>—</b><b>500 $</b></div>
+<div class="r2"><span>Novacutan BioPRO</span><b>250 $</b><b>250 $</b></div>
+
+<div class="sh"><h2>Амінокислоти</h2><i></i></div>
+<div class="ch"><span></span><span>DR. KONDRA</span><span>DR. VALERIIA</span></div>
+<div class="r2"><span>Jalupro Super Hydro</span><b>250 $</b><b>250 $</b></div>
+<div class="r2"><span>Jalupro Classic</span><b>180 $</b><b>180 $</b></div>
+
+<div class="sh"><h2>Полінуклеотиди</h2><i></i></div>
+<div class="ch"><span></span><span>DR. KONDRA</span><span>DR. VALERIIA</span></div>
+<div class="r2"><span>Plenhyage</span><b>250 $</b><b>230 $</b></div>
+<div class="r2"><span>Pluryal</span><b>250 $</b><b>230 $</b></div>
+<div class="r2"><span>Vitaran</span><b>200 $</b><b>200 $</b></div>
+
+<div class="nt">Консультація з оглядом та рекомендаціями — безкоштовна, якщо ви здійснюєте процедуру в цей же день. Якщо ж процедура не проводиться — вартість консультації становить <b>1000 грн</b>.</div>
+</div></div></article>
+<article class="sheet" id="lifting" aria-label="Ліфтинг"><div class="frame"><div class="pg" id="s-lifting">
+<div class="logo"><b>KONDRA</b><span>clinic</span></div>
+<h1 class="t" style="font-size:132px">ЛІФТИНГ</h1>
+<div class="sub">Колагеностимуляція · векторний</div>
+
+<div class="sh"><h2>Колагеностимуляція</h2><i></i></div>
+<div class="ch"><span></span><span>DR. KONDRA</span><span>DR. VALERIIA</span></div>
+<div class="lb">Lenisna</div>
+<div class="r2"><span>Живіт</span><b>600 $</b><b>550 $</b></div>
+<div class="r2"><span>Сідниці</span><b>1200 $</b><b>—</b></div>
+<div class="lb">Juvelook</div>
+<div class="r2"><span>Носослізна борозна</span><b>300 $</b><b>280 $</b></div>
+<div class="r2"><span>1 зона<small>обличчя / шия / декольте</small></span><b>400 $</b><b>380 $</b></div>
+<div class="r2"><span>Обличчя + шия</span><b>500 $</b><b>450 $</b></div>
+<div class="r2"><span>Обличчя + шия + декольте</span><b>600 $</b><b>550 $</b></div>
+
+<div class="sh"><h2>Векторний ліфтинг</h2><i></i></div>
+<div class="ch"><span></span><span>DR. KONDRA</span><span>DR. VALERIIA</span></div>
+<div class="r2"><span>Facetem / Radiesse</span><b>400 $</b><b>350 $</b></div>
+
+</div></div></article>
+</main>
+
+<script>
+(function(){
+  var frames=[].slice.call(document.querySelectorAll('.frame'));
+  function fit(){frames.forEach(function(f){f.firstElementChild.style.transform='scale('+(f.clientWidth/1024)+')'})}
+  fit();
+  window.addEventListener('resize',fit);
+  if('ResizeObserver' in window)new ResizeObserver(fit).observe(document.querySelector('main'));
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+})();
+</script>
+
+</body>
+</html>
