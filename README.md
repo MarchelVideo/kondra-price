@@ -1,0 +1,1 @@
+# Kondra Clinic — ціни
